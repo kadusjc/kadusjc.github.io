@@ -1,0 +1,31 @@
+
+
+
+<html>
+<head>
+  <title>List View Widget</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/black-tie/jquery-ui.css" type="text/css" media="all" />   
+</head>
+
+<body>
+    <div id="section1">
+        <rm-shopping-cart order-page-url="https://westernriver.staging-sandbox2.resmarksystems.com/public/order/index/Order/view" class="link" style="color:#000000" />
+    </div>
+    <div id="section2">
+        <rm-list-view entity-id="59c280af63feeb671e8805bc" show-available-quantity="Yes"
+                add-to-cart-text="Add to Cart" add-to-cart-bg="#0000ff" add-to-cart-color="#ffffff"
+                search-text="Search" search-bg="#008000" search-color="#ffffff" 
+                reset-text="Reset" reset-bg="#000000" reset-color="#ffffff" 
+                load-more-text="Load More Results" load-more-bg="#9400d3" load-more-color="#ffffff"
+                use-brand-colors="true"
+        />
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script> 
+<script async src="https://staging-sandbox2.resmarsystems.com/javascript/resmark-order.js?entityId=59c280af63feeb671e8805bc&useBrandColors=false"></script>
+</body>
+
+</html>
