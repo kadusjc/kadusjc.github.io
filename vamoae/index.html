@@ -1,0 +1,608 @@
+  <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>VamoAe - Ingressos, Eventos e Festas</title>
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/vintage-party" rel="stylesheet">
+        <meta name="theme-color" content="#7952b3">
+        <style>
+          
+          a:link { 
+            text-decoration: none; 
+          } 
+          a:visited { 
+            text-decoration: none; 
+          } 
+          a:hover { 
+            text-decoration: none; 
+          } 
+          a:active { 
+            text-decoration: none; 
+          }
+
+          .tales {
+            width: 100%;
+          }
+          .carousel-inner{
+            max-height: 500px !important;
+          }
+
+          .carousel-caption {
+            width:100%;
+            color: white;
+            max-height: 100px;
+            background: rgba(0, 0, 0, 0.4);
+            top: 0px;
+            left: 0px;
+          }
+
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+
+          @import url('https://fonts.cdnfonts.com/css/vintage-party');
+
+          .logo {
+            font-family: 'Vintage Party', sans-serif;
+          }
+
+          .vamo {
+            color: #4178BC;
+            font-size: 60px;
+          }
+
+          .ae { 
+            color: goldenrod;
+            font-size: 60px;
+          }
+
+          .btn.btn-primary {
+            background-color: #4178BC;
+            border-color: #4178BC;
+          }
+      
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+          
+        </style>
+    
+      
+      </head>
+      <body data-new-gr-c-s-check-loaded="14.1152.0" data-gr-ext-installed="">
+          <header class="d-flex flex-wrap align-items-center justify-content-center py-2 mb-2">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+              <!--img src="./img/VamoAeSmall.png"-->
+              <span class="logo vamo">Vamo</span><span class="logo ae">Ae</span>
+              <svg class="bi me-2 vamo" width="50" height="60" transform="rotate(-25 50 80) translate(50, -28)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/></svg>
+              <svg class="bi me-2 vamo" width="41" height="38" transform="rotate(-25 90 120) translate(32, -30)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/></svg>
+             
+            </a>
+      
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="#" class="nav-link px-2 link-dark"><i class="fa fa-ticket" aria-hidden="true"></i>&nbsp;Shows</a></li>
+              <li><a href="#" class="nav-link px-2 link-dark"><i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp;D&uacute;vidas</a></li>
+              <li><a href="#" class="nav-link px-2 link-dark"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>&nbsp;Fale Conosco</a></li>
+            </ul>
+      
+            <div class="col-md-3 text-center">
+              <button type="button" class="btn btn-outline-primary me-2">&nbsp;Entrar</button>
+              <button type="button" class="btn btn-primary">Cadastrar</button>
+            </div>
+            <br/>
+            <hr class="featurette-divider">
+          </header>
+
+          <main role="main">
+            <!-- CAROUSEL SECTION -->
+            <div class="carousel-container">
+              <div id="destaquesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#destaquesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#destaquesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#destaquesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="https://i.ytimg.com/vi/8k9wrOad4HA/maxresdefault.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>Maskavo - 24 Fev - FarmaConde Arena SJC</h5>
+                      <h5>Show épico oh Bahia Babilônia. 20 Anos de Maskavo.</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="https://s2-oglobo.glbimg.com/f5dPMX2TkZkldmm44gzN-vUtL0w=/0x0:1800x1202/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2022/0/p/pXhyXSSxSQNP6KdxBjQg/lulu-santos-festival-sesc-de-inverno-cred-erbs-jr.-1-.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>Lulu Santos - 01 Abril - Esplendor SJC</h5>
+                      <h5>Toca Lulu em sua última turnê.</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="https://cdn.ome.lt/PJBCxwhhopLoIopos6dtR3ByonQ=/1200x630/smart/extras/conteudos/mcs.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>Racionais MCs - 10 Maio - Vila Guarani</h5>
+                      <h5>Show Nego Drama, entre o sucesso e a lama.</h5>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#destaquesCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#destaquesCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CARDS SECTION -->
+            <div id="card" class="container-fluid">
+              <div class="row">
+                <div class="col-sm-3 d-flex justify-content-center ml-10 p-3 mb-2 bg-white rounded">
+                  <div class="card mb-3">
+                    <div class="card-header bg-transparent border-success">
+                        <div style="text-align: center;">
+                          <i class="fa-solid fa-calendar-days"></i>
+                          <strong>Sexta, 09 Fev 2024</strong>
+                          &nbsp;&nbsp;&nbsp; 
+                          <i class="fa fa-clock" aria-hidden="true"></i>
+                          <strong>22h</strong>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./img/card-santa-rita.jpg" alt="Carnaval Santa Rita">
+                    <div class="card-body">
+                      <h5 class="card-title">Carnaval Santa Rita 2024</h5>
+                      <p class="card-text">O carnaval mais tradicional da cidade vai começar novamente em São José dos Campos. Garanta já seu ingresso.</p>
+                      <p class="card-text">
+                        <small class="text-muted">
+                          <i class="fa fa-map-marker"></i>&nbsp;&nbsp;Clube Santa Rita - São José dos Campos - SP<br/>
+                          <i class="fa fa-ban" aria-hidden="true"></i>&nbsp;&nbsp; Classificação: 18 Anos
+                        </small>
+                      </p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                      <div style="text-align: center;">
+                        <button class="btn-primary btn">
+                        <strong>
+                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                          &nbsp;&nbsp;Comprar Agora
+                        </strong>
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-3 d-flex justify-content-center ml-10 p-3 mb-2 bg-white rounded">
+                  <div class="card mb-3">
+                    <div class="card-header bg-transparent border-success">
+                        <div style="text-align: center;">
+                          <i class="fa-solid fa-calendar-days"></i>
+                          <strong>Sábado, 10 Fev 2024</strong>
+                          &nbsp;&nbsp;&nbsp; 
+                          <i class="fa fa-clock" aria-hidden="true"></i>
+                          <strong>22h</strong>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./img/card-santa-rita.jpg" alt="Carnaval Santa Rita">
+                    <div class="card-body">
+                      <h5 class="card-title">Carnaval Santa Rita 2024</h5>
+                      <p class="card-text">O carnaval mais tradicional da cidade vai começar novamente em São José dos Campos. Garanta já seu ingresso.</p>
+                      <p class="card-text">
+                        <small class="text-muted">
+                          <i class="fa fa-map-marker"></i>&nbsp;&nbsp;Clube Santa Rita - São José dos Campos - SP<br/>
+                          <i class="fa fa-ban" aria-hidden="true"></i>&nbsp;&nbsp; Classificação: 18 Anos
+                        </small>
+                      </p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                      <div style="text-align: center;">
+                        <button class="btn-primary btn">
+                        <strong>
+                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                          &nbsp;&nbsp;Comprar Agora
+                        </strong>
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-3 d-flex justify-content-center ml-10 p-3 mb-2 bg-white rounded">
+                  <div class="card mb-3">
+                    <div class="card-header bg-transparent border-success">
+                        <div style="text-align: center;">
+                          <i class="fa-solid fa-calendar-days"></i>
+                          <strong>Domingo, 11 Fev 2024</strong>
+                          &nbsp;&nbsp;&nbsp; 
+                          <i class="fa fa-clock" aria-hidden="true"></i>
+                          <strong>22h</strong>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./img/card-recreativo.jpg" alt="Carnaval Recreativo Caçapava">
+                    <div class="card-body">
+                      <h5 class="card-title">CARNAVAL 2024 CLUBE JEQUITIBA SÁBADO</h5>
+                      <p class="card-text">Vem aí o carnaval mais tradicional de Caçapava! Dias: 10, 11, 12 E 13 de Fevereiro</p>
+                       <p class="card-text">
+                        <small class="text-muted">
+                          <i class="fa fa-map-marker"></i>&nbsp;&nbsp;Clube Jequitiba - Caçapava - SP <br/>
+                          <i class="fa fa-ban" aria-hidden="true"></i>&nbsp;&nbsp; Classificação: 16 Anos
+                        </small>
+                      </p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                      <div style="text-align: center;">
+                        <button class="btn-primary btn">
+                        <strong>
+                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                          &nbsp;&nbsp;Comprar Agora
+                        </strong>
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-3 d-flex justify-content-center ml-10 p-3 mb-2 bg-white rounded">
+                  <div class="card mb-3">
+                    <div class="card-header bg-transparent border-success">
+                        <div style="text-align: center;">
+                          <i class="fa-solid fa-calendar-days"></i>
+                          <strong>Sábado, 10 Fev 2024</strong>
+                          
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <i class="fa fa-clock" aria-hidden="true"></i>
+                          <strong>21h</strong>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./img/card-carna-forro.jpg" alt="Carnaval Forro 2024">
+                    <div class="card-body">
+                      <h5 class="card-title">Carna Forro 2024</h5>
+                      <p class="card-text">Dia 10 de Fevereiro de 2024 tem SORO SILVA E FORRO BOYS na Hoower Show House em Caieras, SP!
+
+                        Ingressos à venda, aproveite e garanta o seu.
+                        
+                        Evento Oficial no Facebook</p>
+                       <p class="card-text">
+                        <small class="text-muted">
+                          <i class="fa fa-map-marker"></i>&nbsp;&nbsp; Hoower Show House - Caieiras - SP<br/>
+                          <i class="fa fa-ban" aria-hidden="true"></i>&nbsp;&nbsp; Classificação: 16 Anos
+                        </small>
+                      </p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                      <div style="text-align: center;">
+                        <button class="btn-primary btn">
+                        <strong>
+                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                          &nbsp;&nbsp;Comprar Agora
+                        </strong>
+                      </button>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+             
+              <div class="row">
+                <div class="col-sm-3 d-flex justify-content-center ml-10 p-3 mb-2 bg-white rounded">
+                  <div class="card mb-3">
+                    <div class="card-header bg-transparent border-success">
+                        <div style="text-align: center;">
+                          <i class="fa-solid fa-calendar-days"></i>
+                          <strong>Sábado, 17 Fev 2024</strong>
+                          &nbsp;&nbsp;&nbsp; 
+                          <i class="fa fa-clock" aria-hidden="true"></i>
+                          <strong>09h</strong>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./img/card-tunning-show.jpg" alt="Tunning Show Ubatuba">
+                    <div class="card-body">
+                      <h5 class="card-title">TUNING SHOW BRASIL</h5>
+                      <p class="card-text">Um evento para Toda a Família!
+                        Agora é a vez de Ubatuba receber a edição de Verão do Tuning Show Brasil.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted">
+                          <i class="fa fa-map-marker"></i>&nbsp;&nbsp;Praça de Eventos de Ubatuba - Ubatuba - SP<br/>
+                          <i class="fa fa-ban" aria-hidden="true"></i>&nbsp;&nbsp; Classificação: Livre
+                        </small>
+                      </p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                      <div style="text-align: center;">
+                        <button class="btn-primary btn">
+                        <strong>
+                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                          &nbsp;&nbsp;Comprar Agora
+                        </strong>
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-3 d-flex justify-content-center ml-10 p-3 mb-2 bg-white rounded">
+                  <div class="card mb-3">
+                    <div class="card-header bg-transparent border-success">
+                        <div style="text-align: center;">
+                          <i class="fa-solid fa-calendar-days"></i>
+                          <strong>Domingo, 18 Fev 2024</strong>
+                          &nbsp;&nbsp;&nbsp; 
+                          <i class="fa fa-clock" aria-hidden="true"></i>
+                          <strong>09h</strong>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./img/card-tunning-show.jpg" alt="Tunning Show Ubatuba">
+                    <div class="card-body">
+                      <h5 class="card-title">TUNING SHOW BRASIL</h5>
+                      <p class="card-text">Um evento para Toda a Família!
+                        Agora é a vez de Ubatuba receber a edição de Verão do Tuning Show Brasil.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted">
+                          <i class="fa fa-map-marker"></i>&nbsp;&nbsp;Praça de Eventos de Ubatuba - Ubatuba - SP<br/>
+                          <i class="fa fa-ban" aria-hidden="true"></i>&nbsp;&nbsp; Classificação: Livre
+                        </small>
+                      </p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                      <div style="text-align: center;">
+                        <button class="btn-primary btn">
+                        <strong>
+                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                          &nbsp;&nbsp;Comprar Agora
+                        </strong>
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-3 d-flex justify-content-center ml-10 p-3 mb-2 bg-white rounded">
+                  <div class="card mb-3">
+                    <div class="card-header bg-transparent border-success">
+                        <div style="text-align: center;">
+                          <i class="fa-solid fa-calendar-days"></i>
+                          <strong>Sábado, 24 Fev 2024</strong>
+                          &nbsp;&nbsp;&nbsp; 
+                          <i class="fa fa-clock" aria-hidden="true"></i>
+                          <strong>22h</strong>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./img/card-canecao.png" alt="Festa do Kanecão anos 80 e 90">
+                    <div class="card-body">
+                      <h5 class="card-title">FESTA DO KANECÃO</h5>
+                      <p class="card-text">Dia 24 de Fevereiro tem FESTA DO KANEKÃO no Rancho Santa Fé em Mogi das Cruzes, SP! O melhor dos anos 80, 90 e 2000
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted">
+                          <i class="fa fa-map-marker"></i>&nbsp;&nbsp;Rancho Santa Fé - Mogi das Cruzes - SP<br/>
+                          <i class="fa fa-ban" aria-hidden="true"></i>&nbsp;&nbsp; Classificação: 18 anos
+                        </small>
+                      </p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                      <div style="text-align: center;">
+                        <button class="btn-primary btn">
+                        <strong>
+                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                          &nbsp;&nbsp;Comprar Agora
+                        </strong>
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-3 d-flex justify-content-center ml-10 p-3 mb-2 bg-white rounded">
+                  <div class="card mb-3">
+                    <div class="card-header bg-transparent border-success">
+                        <div style="text-align: center;">
+                          <i class="fa-solid fa-calendar-days"></i>
+                          <strong>Sábado, 09 Março 2024</strong>
+                          &nbsp;&nbsp;&nbsp; 
+                          <i class="fa fa-clock" aria-hidden="true"></i>
+                          <strong>22h</strong>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./img/card-luan.png" alt="Show do Luan Pereira">
+                    <div class="card-body">
+                      <h5 class="card-title">Show Luan Pereira</h5>
+                      <p class="card-text">Dia 09 de Março tem show do Luan Pereira no Rancho Santa Fé. Garanta já o seu ingresso.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted">
+                          <i class="fa fa-map-marker"></i>&nbsp;&nbsp;Rancho Santa Fé - Mogi das Cruzes - SP<br/>
+                          <i class="fa fa-ban" aria-hidden="true"></i>&nbsp;&nbsp; Classificação: 18 anos
+                        </small>
+                      </p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                      <div style="text-align: center;">
+                        <button class="btn-primary btn">
+                        <strong>
+                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                          &nbsp;&nbsp;Comprar Agora
+                        </strong>
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              </div>
+            </div>
+      
+            <div class="b-example-divider"></div>
+
+            <!-- FOOTER -->
+            <section class="pb-4">
+              <div class="border rounded-5">
+                
+                <section class="p-4">
+                  <!-- Footer -->
+                  <footer class="bg-body-tertiary text-center">
+                    <!-- Grid container -->
+                    
+                    <div class="container p-10">
+                      <span class="logo vamo">Vamo</span><span class="logo ae">Ae</span>
+                      <svg class="bi me-2 vamo" width="50" height="60" transform="rotate(-25 50 80) translate(50, -28)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/></svg>
+                      <svg class="bi me-2 vamo" width="41" height="38" transform="rotate(-25 90 120) translate(32, -30)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/></svg>
+                     
+                      <!--img src="./img/VamoAeSmall.png" class="img-fluid" style="min-width:20%; min-height: 10%"-->
+                    </div>
+                    
+                    <div class="container p-4">
+                      <!-- Section: Social media -->
+                      <section class="mb-4">
+                        <!-- Facebook -->
+                        <a data-mdb-ripple-init="" class="btn btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+            
+                        <!-- Twitter -->
+                        <a data-mdb-ripple-init="" class="btn btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+            
+                        <!-- Google -->
+                        <a data-mdb-ripple-init="" class="btn btn-outline btn-floating m-1" href="#!" role="button" style=""><i class="fab fa-google"></i></a>
+            
+                        <!-- Instagram -->
+                        <a data-mdb-ripple-init="" class="btn btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+            
+                        <!-- Linkedin -->
+                        <a data-mdb-ripple-init="" class="btn btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+            
+                        <!-- Github -->
+                        <a data-mdb-ripple-init="" class="btn btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+                      </section>
+                      <!-- Section: Social media -->
+            
+                      <!-- Section: Form -->
+            
+                      <!-- Section: Text -->
+                      <section class="mb-4">
+                        <p>
+                          Nos siga nas redes sociais e fique por dentro de seus eventos preferidos.
+                        </p>
+                      </section>
+                      <!-- Section: Text -->
+            
+                      <!-- Section: Links-->
+                      <section class="">
+                        <div class="row">
+                          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                          
+                            <ul class="list-unstyled mb-0">
+                              <li>
+                                <a class="text-body" href="#!"><small>Home</small></a>
+                              </li>
+                              <li>
+                                <a class="text-body" href="#!"><small>Nossos Serviços</small></a>
+                              </li>
+                              <li>
+                                <a class="text-body" href="#!"><small>Política de Privacidade</small></a>
+                              </li>
+                              <li>
+                                <a class="text-body" href="#!"><small>Quem Somos</small></a>
+                              </li>
+                            </ul>
+                          </div>
+                        
+                          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                            
+                            <ul class="list-unstyled mb-0 p-0">
+                              <li>
+                                <a class="text-body" href="#!"><small>Minha Conta</small></a>
+                              </li>
+                              <li>
+                                <a class="text-body" href="#!"><small>Editar Cadastro</small></a>
+                              </li>
+                              <li>
+                                <a class="text-body" href="#!"><small>Esqueci Minha Senha</small></a>
+                              </li>
+                              <li>
+                                <a class="text-body" href="#!"><small>Meus Pedidos</small></a>
+                              </li>
+                            </ul>
+                          </div>
+                         
+                          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                            <ul class="list-unstyled mb-0">
+                              <li>
+                                <a class="text-body" href="#!"><small>Fale Conosco</small></a>
+                              </li>
+                              <li>
+                                <a class="text-body" href="#!"><small>Política de Cancelamento</small></a>
+                              </li>
+                              <li>
+                                <a class="text-body" href="#!"><small>Dúvidas Frequentes</small></a>
+                              </li>
+                              
+                            </ul>
+                          </div>
+                          
+                          
+                        </div>
+                      </section>
+                      <!--Section: Links-->
+                    </div>
+                    <!-- Grid container -->
+            
+                    <!-- Logo footer-->
+                    <!-- Copyright -->
+                    <div class="text-center p-3" style="color: white; background-color: #4178BC">
+                      © 2024 Copyright
+                      <a class="text-reset logo" style="font-size: 18px;" href="">VamoAe</a>
+                    </div>
+                    
+                    <!-- Copyright -->
+                  </footer>
+                  <!-- Footer -->
+                </section>
+                
+              </div>
+            </section>
+            <!--div class="container">
+              <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                  <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                  </a>
+                  <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+                </div>
+            
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                  <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                  <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                  <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                </ul>
+              </footer>
+            </div-->
+          </main>
+
+          <script>
+            window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"><\/script>')
+            var myCarousel = document.querySelector('#destaquesCarousel')
+            var carousel = new bootstrap.Carousel(myCarousel, {
+              interval: 2000,
+              wrap: false
+            })
+          </script>
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.8/holder.min.js" crossorigin="anonymous"></script>
+          
+    </body>
+</html>
