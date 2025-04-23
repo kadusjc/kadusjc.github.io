@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7952b3">
+  
+  <title>Vamoaê - Eventos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/vintage-party" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- SwiperJS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+   
+    .event-card img {
+      border-radius: 0.5rem;
+    }
+    .footer {
+      background-color: #fff;
+      padding: 2rem 0;
+      border-top: 1px solid #dee2e6;
+    }
+    @import url('https://fonts.cdnfonts.com/css/vintage-party');
+
+    .logo {
+      font-family: 'Vintage Party', sans-serif;
+    }
+
+    .vamo {
+      color: #4178BC;
+      font-size: 5cqb;
+    }
+
+    .ae { 
+      color: goldenrod;
+      font-size: 50px;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .carousel-container {
+      width: 100%;
+      max-width: 1800px;
+      margin: auto;
+    }
+
+    .swiper {
+      padding: 40px 0;
+    }
+
+    .swiper-slide {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.5s;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .card-subtitle {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #007bff;
+    }
+
+    .swiper-pagination-bullet {
+      background: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <span class="logo vamo">Vamo</span><span class="logo ae">Ae</span>
+      <svg class="bi me-2 vamo" width="50" height="60" transform="rotate(-25 50 80) translate(50, -28)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/></svg>
+      <svg class="bi me-2 vamo" width="41" height="38" transform="rotate(-25 90 120) translate(32, -30)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/></svg>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Destaques</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <div class="carousel-container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6" alt="Evento 1">
+            <div class="card-content">
+              <div class="card-title">Show Ao Vivo</div>
+              <div class="card-subtitle">São Paulo - 22/06</div>
+            </div>
+          </div>
+  
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2" alt="Evento 2">
+            <div class="card-content">
+              <div class="card-title">Festa Neon</div>
+              <div class="card-subtitle">Rio de Janeiro - 10/05</div>
+            </div>
+          </div>
+  
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" alt="Evento 3">
+            <div class="card-content">
+              <div class="card-title">Peça Infantil</div>
+              <div class="card-subtitle">Curitiba - 30/04</div>
+            </div>
+          </div>
+  
+  
+        </div>
+  
+        <!-- Botões -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+  
+        <!-- Paginação -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eventos em destaque -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Eventos em destaque</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="event-card">
+            <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2" class="img-fluid mb-2" alt="Concerto">
+            <h5>Concerto de Rock</h5>
+            <p class="mb-1">26 de maio de 2024<br>São Paulo</p>
+            <span class="badge bg-light text-dark">Música</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="event-card">
+            <img src="https://images.unsplash.com/photo-1581091870633-3e09d69f5e4c" class="img-fluid mb-2" alt="Conferência">
+            <h5>Conferência de Tecnologia</h5>
+            <p class="mb-1">15 de junho de 2024<br>Rio de Janeiro</p>
+            <span class="badge bg-light text-dark">Tecnologia</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="event-card">
+            <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" class="img-fluid mb-2" alt="Festa">
+            <h5>Festa Sunset</h5>
+            <p class="mb-1">26 de junho de 2024<br>Belo Horizonte</p>
+            <span class="badge bg-light text-dark">Festa</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="event-card">
+            <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6" class="img-fluid mb-2" alt="Feira">
+            <h5>Feira de Artesanato</h5>
+            <p class="mb-1">1 de julho de 2024<br>Curitiba</p>
+            <span class="badge bg-light text-dark">Artesanato</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destaques -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Destaques</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="https://images.unsplash.com/photo-1543392752-8c92a5c6d3b7" class="img-fluid" alt="Show">
+        </div>
+        <div class="col-md-4">
+          <img src="https://images.unsplash.com/photo-1573164574392-70d899f38e1e" class="img-fluid" alt="Palestra">
+        </div>
+        <div class="col-md-4">
+          <img src="https://images.unsplash.com/photo-1515162305283-9a4ab8d20e58" class="img-fluid" alt="Feira">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold">Eventos</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-muted">Eventos</a></li>
+            <li><a href="#" class="text-decoration-none text-muted">Destaques</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold">Destaques</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-muted">Apanhe</a></li>
+            <li><a href="#" class="text-decoration-none text-muted">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold">Contato</h6>
+          <p class="text-muted">© 2024 Vamoaê</p>
+          <a href="#" class="text-muted me-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-muted me-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-muted"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>
