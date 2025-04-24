@@ -18,20 +18,23 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <style>
 
-    .event-card {
-      text-align: center;
-      align-items: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      background-color: #fff;
-    }
 
-    .event-card img {
-      border-radius: 0.5rem;
-    }
+    /** Corpo do Site **/
+    
     .footer {
       background-color: #fff;
       padding: 2rem 0;
       border-top: 1px solid #dee2e6;
+    }
+
+    .vamo-footer {
+      color: #4178BC;
+      font-size: 24px;
+    }
+
+    .ae-footer { 
+      color: goldenrod;
+      font-size: 24px;
     }
     @import url('https://fonts.cdnfonts.com/css/vintage-party');
 
@@ -55,6 +58,23 @@
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
     }
+
+    /** Menu Superior **/
+    .menu-items {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .custom-hover-button {
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .custom-hover-button:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border-color: #4178BC; /* Cor da borda ao passar o mouse */
+    }
+    
+
+
+    /** Carrousel **/
 
     .carousel-container {
       width: 100%;
@@ -90,23 +110,86 @@
     }
 
     .card-title {
-      font-size: 1.2rem;
+      font-size: 24px;
       font-weight: bold;
       margin-bottom: 5px;
     }
 
     .card-subtitle {
-      font-size: 0.9rem;
-      color: #666;
+      font-size: 12px;
+      color: #333;
     }
-
+    
     .swiper-button-next,
     .swiper-button-prev {
       color: #007bff;
     }
 
+    .text-blue {
+      color: #4178BC;
+    }
+
     .swiper-pagination-bullet {
-      background: #007bff;
+      background: #4178BC;
+    }
+
+    
+  
+    
+    /** Barra de pesquisa **/
+   .search-input:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      border-color: #4178BC; /* Cor da borda ao passar o mouse */
+    }
+
+    /* Ícone de lupa */
+    .text-blue {
+      color: #4178BC;
+    }
+
+
+
+    /** Card de eventos destaque **/
+
+    .event-card-hover {
+      transition: box-shadow 0.3s ease, border 0.3s ease;
+      background-color: #fff;
+    }
+
+    .event-card-hover:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid #dee2e6; /* cor da borda */
+      background-color: #fff;
+    }
+
+    .event-card {
+      text-align: center;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .event-card img {
+      border-radius: 0.5rem;
+    }
+
+    .event-destaque {
+      font-size: 13px;
+      font-weight: none;
+      margin: 5px;
+      color: #333;
+      text-align: justify;
+    }
+
+    .event-destaque-data {
+      font-size: 0.9rem;
+      color: #4178BC;
+    }
+
+    h5 {
+      padding: 5px;
+      margin: 5px;
+      font-size: 18px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -122,16 +205,33 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Destaques</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+        <ul class="navbar-nav ms-auto menu-items">
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Destaques</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Contato</a>
+          </li>
+          <li class="nav-item d-flex align-items-center ms-4">
+            <!-- Botão redondo com ícones alinhados -->
+            <a href="#" class="btn rounded-circle d-flex align-items-center justify-content-center custom-hover-button" 
+               style="width: 50px; height: 50px; background-color: #fff; color: #6c757d; border: 1px solid #dee2e6;">
+              <span class="d-flex align-items-center">
+                <i class="bi bi-list ms-1" style="font-size: 18px;"></i>
+                <i class="bi bi-person" style="font-size: 18px;"></i>
+              </span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+
+  <!-- Carrosel Section -->
   <section class="hero text-center">
     <div class="carousel-container">
       <div class="swiper">
@@ -140,24 +240,30 @@
           <div class="swiper-slide">
             <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6" alt="Evento 1">
             <div class="card-content">
-              <div class="card-title">Show Ao Vivo</div>
-              <div class="card-subtitle">São Paulo - 22/06</div>
+              <div class="card-title">
+                
+                &nbsp;&nbsp;Show Ao Vivo</div>
+              <div class="card-subtitle"><i class="bi bi-calendar-event"></i>&nbsp;&nbsp;São Paulo - 22/06</div>
             </div>
           </div>
   
           <div class="swiper-slide">
             <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2" alt="Evento 2">
             <div class="card-content">
-              <div class="card-title">Festa Neon</div>
-              <div class="card-subtitle">Rio de Janeiro - 10/05</div>
+              <div class="card-title">
+                
+                &nbsp;&nbsp;Festa Neon</div>
+              <div class="card-subtitle"><i class="bi bi-calendar-event"></i>&nbsp;&nbsp;Rio de Janeiro - 10/05</div>
             </div>
           </div>
   
           <div class="swiper-slide">
             <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" alt="Evento 3">
             <div class="card-content">
-              <div class="card-title">Peça Infantil</div>
-              <div class="card-subtitle">Curitiba - 30/04</div>
+              <div class="card-title">
+                
+                &nbsp;&nbsp;Peça Infantil</div>
+              <div class="card-subtitle"><i class="bi bi-calendar-event"></i>&nbsp;&nbsp;Curitiba - 30/04</div>
             </div>
           </div>
   
@@ -174,93 +280,252 @@
     </div>
   </section>
 
+
+
+  <!-- Barra de pesquisa -->
+  <section class="search-bar py-5">
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <div class="input-group position-relative" style="max-width: 900px; width: 100%;">
+          <span class="input-group-text bg-transparent border-0 position-absolute" style="left: 20px; top: 50%; transform: translateY(-50%); z-index: 10;">
+            <i class="bi bi-search text-blue" style="font-size: 28px;"></i>
+          </span>
+          <input type="text" class="form-control rounded-pill search-input" placeholder="Busque eventos, locais ou categorias..." 
+                 style="padding-left: 70px; height: 60px; font-size: 18px; border: 2px solid #dee2e6; transition: box-shadow 0.3s ease, border-color 0.3s ease;">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Eventos em destaque -->
   <section class="py-5">
     <div class="container">
       <h2 class="fw-bold mb-4">Eventos em destaque</h2>
       <div class="row g-4">
         <div class="col-md-3">
-          <div class="event-card rounded">
+          <div class="event-card-hover event-card rounded">
+
             <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2" class="img-fluid mb-2" alt="Concerto">
-            <h5>Concerto de Rock</h5>
-            <p class="mb-1">26 de maio de 2024<br>São Paulo</p>
-            <span class="badge bg-light text-dark">Música</span>
+            <div id="destaque0">
+              <h5>
+                <svg class="bi me-2 vamo" width="25" height="25" transform="rotate(-25 50 80) translate(50, -10)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/>
+                </svg>
+                &nbsp;&nbsp;&nbsp;Concerto de Rock</h5>
+              <p class="event-destaque">Estádio Olímpico do Pará - Jornalista Edgar Proença, vulgo Mangueirão - Belém, PA</p>
+              <div>
+                <div>
+                  <div class="event-destaque-data"><i class="bi bi-calendar-event"></i>&nbsp;&nbsp;Sábado, 31 de Jan às 09:00</div>
+                </div>
+              </div>
+            </div>
+
+            <span class="badge bg-light text-blue">Música</span>
+            <br/>
           </div>
         </div>
         <div class="col-md-3">
-          <div class="event-card rounded">
+          <div class="event-card-hover event-card rounded">
             <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2" class="img-fluid mb-2" alt="Conferência">
-            <h5>Conferência de Tecnologia</h5>
-            <p class="mb-1">15 de junho de 2024<br>Rio de Janeiro</p>
-            <span class="badge bg-light text-dark">Tecnologia</span>
+            <div id="destaque1">
+              <h5>
+                <svg class="bi me-2 vamo" width="25" height="25" transform="rotate(-25 50 80) translate(50, -10)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/>
+                </svg>
+                &nbsp;&nbsp;&nbsp;Conferência de Tecnologia</h5>
+              <p class="event-destaque">Theatro Municipal do Rio de Janeiro - Praça Floriano, S/N - Centro, Rio de Janeiro - RJ</p>
+              <div>
+                <div>
+                  <div class="event-destaque-data"><i class="bi bi-calendar-event"></i>&nbsp;&nbsp;Sábado, 12 de Out às 09:00</div>
+                </div>
+              </div>
+            </div>
+
+            <span class="badge bg-light text-blue">Tecnologia</span>
+            <br/>
+      
           </div>
         </div>
+
+
         <div class="col-md-3">
-          <div class="event-card rounded">
+          <div class="event-card-hover event-card rounded">
             <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" class="img-fluid mb-2" alt="Festa">
-            <h5>Festa Sunset</h5>
-            <p class="mb-1">26 de junho de 2024<br>Belo Horizonte</p>
-            <span class="badge bg-light text-dark">Festa</span>
+            <div id="destaque2">
+              <h5>
+                <svg class="bi me-2 vamo" width="25" height="25" transform="rotate(-25 50 80) translate(50, -10)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/>
+                </svg>
+                &nbsp;&nbsp;&nbsp;Festa Sunset</h5>
+              <p class="event-destaque">Clube Chalezinho - Av. Professor Mário Werneck, 530 - Estoril, Belo Horizonte - MG</p>
+              <div>
+                <div>
+                  <div class="event-destaque-data"><i class="bi bi-calendar-event"></i>&nbsp;&nbsp;Agosto, 1 de Jan às 23:00</div>
+                </div>
+              </div>
+            </div>
+
+            <span class="badge bg-light text-blue">Música</span>
+            <br/>
           </div>
         </div>
+
+
         <div class="col-md-3">
-          <div class="event-card">
+          <div class="event-card-hover event-card rounded">
             <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6" class="img-fluid mb-2" alt="Feira">
-            <h5>Feira de Artesanato</h5>
-            <p class="mb-1">1 de julho de 2024<br>Curitiba</p>
-            <span class="badge bg-light text-dark">Artesanato</span>
+            <div id="destaque3">
+              <h5>
+                <svg class="bi me-2 vamo" width="25" height="25" transform="rotate(-25 50 80) translate(50, -10)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/>
+                </svg>
+                &nbsp;&nbsp;&nbsp;Seminário Mais Educação</h5>
+              <p class="event-destaque">Estádio Olímpico do Pará - Jornalista Edgar Proença, vulgo Mangueirão - Belém, PA</p>
+              <div>
+                <div>
+                  <div class="event-destaque-data"><i class="bi bi-calendar-event"></i>&nbsp;&nbsp;Sexta, 12 de Jun às 09:00</div>
+                </div>
+              </div>
+            </div>
+
+            <span class="badge bg-light text-blue">Educação</span>
+            <br/>
           </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="event-card-hover event-card rounded">
+            <img src="https://garagem360.com.br/wp-content/uploads/2022/01/autoshow-5.jpg" class="img-fluid mb-2" alt="Feira">
+            <div id="destaque4">
+              <h5>
+                <svg class="bi me-2 vamo" width="25" height="25" transform="rotate(-25 50 80) translate(50, -10)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/>
+                </svg>
+                &nbsp;&nbsp;&nbsp;Feira de Carros</h5>
+              <p class="event-destaque">Osasco, Centro, SP</p>
+              <div>
+                <div>
+                  <div class="event-destaque-data"><i class="bi bi-calendar-event"></i>&nbsp;&nbsp;Sexta, 12 de Jun às 09:00</div>
+                </div>
+              </div>
+            </div>
+
+            <span class="badge bg-light text-blue">Motores</span>
+            <br/>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="event-card-hover event-card rounded">
+            <img src="https://garagem360.com.br/wp-content/uploads/2022/01/autoshow-5.jpg" class="img-fluid mb-2" alt="Feira">
+            <div id="destaque5">
+              <h5>
+                <svg class="bi me-2 vamo" width="25" height="25" transform="rotate(-25 50 80) translate(50, -10)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/>
+                </svg>
+                &nbsp;&nbsp;&nbsp;Feira de Carros</h5>
+              <p class="event-destaque">Osasco, Centro, SP</p>
+              <div>
+                <div>
+                  <div class="event-destaque-data"><i class="bi bi-calendar-event"></i>&nbsp;&nbsp;Sexta, 12 de Jun às 09:00</div>
+                </div>
+              </div>
+            </div>
+
+            <span class="badge bg-light text-blue">Motores</span>
+            <br/>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="event-card-hover event-card rounded">
+            <img src="https://i.ytimg.com/vi/K-p2kYL0ifc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDgWvW4UDUQjPYl5wR8GaxiNxexnA" class="img-fluid mb-2" alt="Feira">
+            <div id="destaque6">
+              <h5>
+                <svg class="bi me-2 vamo" width="25" height="25" transform="rotate(-25 50 80) translate(50, -10)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/>
+                </svg>
+                &nbsp;&nbsp;&nbsp;Maskavo 15 anos</h5>
+              <p class="event-destaque">Praia do Curral - Ilhabela, SP</p>
+              <div>
+                <div>
+                  <div class="event-destaque-data"><i class="bi bi-calendar-event"></i>&nbsp;&nbsp;Sexta, 12 de Jun às 09:00</div>
+                </div>
+              </div>
+            </div>
+
+            <span class="badge bg-light text-blue">Música</span>
+            <br/>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="event-card-hover event-card rounded">
+            <img src="https://i.ytimg.com/vi/K-p2kYL0ifc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDgWvW4UDUQjPYl5wR8GaxiNxexnA" class="img-fluid mb-2" alt="Feira">
+            <div id="destaque6">
+              <h5>
+                <svg class="bi me-2 vamo" width="25" height="25" transform="rotate(-25 50 80) translate(50, -10)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/>
+                </svg>
+                &nbsp;&nbsp;&nbsp;Maskavo 15 anos</h5>
+              <p class="event-destaque">Praia do Curral - Ilhabela, SP</p>
+              <div>
+                <div>
+                  <div class="event-destaque-data"><i class="bi bi-calendar-event"></i>&nbsp;&nbsp;Sexta, 12 de Jun às 09:00</div>
+                </div>
+              </div>
+            </div>
+
+            <span class="badge bg-light text-blue">Música</span>
+            <br/>
+          </div>
+        </div>
+
+
+
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Destaques -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="fw-bold mb-4">Destaques</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <img src="https://garagem360.com.br/wp-content/uploads/2022/01/autoshow-5.jpg" class="img-fluid" alt="Show">
-            <h5>Feira de Carros</h5>
-            <p class="mb-1">25 de junho de 2024<br>Osasco</p>
-            <span class="badge bg-light text-dark">Motores</span>
-        </div>
-        <div class="col-md-4">
-          <img src="https://garagem360.com.br/wp-content/uploads/2022/01/autoshow-5.jpg" class="img-fluid" alt="Palestra">
-          <h5>Feira de Carros</h5>
-          <p class="mb-1">25 de junho de 2025<br>Osasco</p>
-          <span class="badge bg-light text-dark">Motores</span>
-        </div>
-        <div class="col-md-4">
-          <img src="https://i.ytimg.com/vi/K-p2kYL0ifc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDgWvW4UDUQjPYl5wR8GaxiNxexnA" class="img-fluid" alt="Feira">
-          <h5>Maskavo 25 anos</h5>
-            <p class="mb-1">12 de agosto de 2025<br>São Paulo</p>
-            <span class="badge bg-light text-dark">Música</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="footer text-center">
+    
     <div class="container">
+
       <div class="row">
-        <div class="col-md-4 mb-3">
+        <div class="col-md-3 mb-3">
+          <span class="logo vamo-footer">Vamo</span><span class="logo ae-footer">Ae</span>
+          <svg class="bi me-2 vamo" width="20" height="40" transform="rotate(-25 50 80) translate(50, -28)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/></svg>
+          <svg class="bi me-2 vamo" width="15" height="25" transform="rotate(-25 90 120) translate(46, -40)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill: #4178BC" d="M64 64C28.7 64 0 92.7 0 128v64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320v64c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V320c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6V128c0-35.3-28.7-64-64-64H64zm64 112l0 160c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32H448c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V160z"/></svg>
+          <br />
+          <small class="text-muted">Compre Também</small>
+          <div class="mt-3">
+            <a href="https://play.google.com/store" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Store" style="height: 40px;">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
           <h6 class="fw-bold">Eventos</h6>
           <ul class="list-unstyled">
             <li><a href="#" class="text-decoration-none text-muted">Eventos</a></li>
             <li><a href="#" class="text-decoration-none text-muted">Destaques</a></li>
           </ul>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-md-3 mb-3">
           <h6 class="fw-bold">Destaques</h6>
           <ul class="list-unstyled">
             <li><a href="#" class="text-decoration-none text-muted">Apanhe</a></li>
             <li><a href="#" class="text-decoration-none text-muted">Contato</a></li>
           </ul>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-md-3 mb-3">
           <h6 class="fw-bold">Contato</h6>
           <p class="text-muted">© 2024 Vamoaê</p>
           <a href="#" class="text-muted me-2"><i class="bi bi-twitter"></i></a>
@@ -268,6 +533,8 @@
           <a href="#" class="text-muted"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
+      <br/>
+     
     </div>
   </footer>
 
